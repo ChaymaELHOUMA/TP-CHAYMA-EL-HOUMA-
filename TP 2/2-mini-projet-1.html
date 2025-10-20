@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Projet Vue.js</title>
+  <script src="https://unpkg.com/vue@3"></script>
+  <style>
+    img {
+      float: left;
+      margin-right: 1rem;
+      border-radius: 10px;
+    }
+
+    .personne {
+      clear: both;
+      padding: 1rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    input[type="checkbox"],
+    select {
+      margin-right: 1rem;
+    }
+
+    .misEnForme {
+      background: #e0ffff;
+      font-family: Georgia;
+      font-size: 1.1rem;
+      margin: 1rem;
+      border-radius: 10px;
+    }
+
+    button {
+      margin-top: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    
+    <fieldset>
+      <legend>Filtre sur le nom</legend>
+      <input type="text" v-model="filtreNom" placeholder="Rechercher un nom...">
+    </fieldset>
+
+    
+    <fieldset>
+      <legend>Options</legend>
+      Homme <input type="checkbox" v-model="homme">
+      Femme <input type="checkbox" v-model="femme">
+      Téléphone & Email <input type="checkbox" v-model="afficherContact">
+      Photo
+      <select v-model="taille">
+        <option value="thumbnail">Petit</option>
+        <option value="medium">Moyen</option>
+        <option value="large">Grand</option>
+      </select>
+      Mise en forme <input type="checkbox" v-model="mef">
+    </fieldset>
+
+   
+    <div :class="{'misEnForme': mef}">
+      <div class="personne" v-for="p in personnesFiltrees" :key="p.email">
+        <img :src="p.picture[taille]" alt="photo">
+        <strong>{{ p.name.title }} {{ p.name.first }} {{ p.name.last }}</strong><br>
+        <em>{{ p.location.country }}</em><br>
+
+        <div v-if="afficherContact">
+          <div>Téléphone : {{ p.phone }}</div>
+          <div>Email : {{ p.email }}</div>
+        </div>
+
+        <div v-else>
+          <button @click="p.showContact = !p.showContact">
+            {{ p.showContact ? 'Cacher contact' : 'Afficher contact' }}
+          </button>
+          <div v-if="p.showContact">
+            <div>Téléphone : {{ p.phone }}</div>
+            <div>Email : {{ p.email }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          personnes: [],
+          homme: true,
+          femme: true,
+          afficherContact: false,
+          mef: false,
+          taille: 'medium',
+          filtreNom: ''
+        }
+      },
+      computed: {
+        personnesFiltrees() {
+          return this.personnes.filter(p => {
+            const correspondSexe = (this.homme && p.gender === 'male') || (this.femme && p.gender === 'female');
+            const correspondNom = p.name.last.toLowerCase().includes(this.filtreNom.toLowerCase());
+            return correspondSexe && correspondNom;
+          });
+        }
+      },
+      mounted() {
+        
+        fetch('personnes.json')
+          .then(res => res.json())
+          .then(data => {
+            
+            this.personnes = data.map(p => ({ ...p, showContact: false }));
+          });
+      }
+    });
+
+    app.mount('#app');
+  </script>
+</body>
+
+</html>
