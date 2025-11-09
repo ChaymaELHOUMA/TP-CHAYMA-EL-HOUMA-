@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Apprendre les bases de Vue 3",
+    "description": "Lire le cours et suivre les exemples",
+    "completed": false
+  },
+  {
+    "id": 2,
+    "title": "Installer Node et VS Code",
+    "description": "Installer Node.js et préparer l'environnement",
+    "completed": true
+  },
+  {
+    "id": 3,
+    "title": "Faire le TP DBJS",
+    "description": "Coder le composant TaskList et tester",
+    "completed": false
+  }
+]
