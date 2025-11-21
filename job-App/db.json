@@ -1,0 +1,60 @@
+{
+  "jobs": [
+    {
+      "id": "1",
+      "title": "Développeur Frontend",
+      "company": "TechCorp",
+      "description": "Créer et maintenir les interfaces utilisateur en Vue.js.",
+      "salary": 8000,
+      "experience": 2 
+    },
+    {
+      "id": "2",
+      "title": "Administrateur système",
+      "company": "Université",
+      "description": "Gérer serveurs et réseau.",
+      "salary": 9000,
+      "experience": 3 
+    },
+    {
+      "id": "3",
+      "title": "Designer UI/UX",
+      "company": "Creative Studio",
+      "description": "Concevoir des interfaces attractives et ergonomiques.",
+      "salary": 7000,
+      "experience": 1
+    },
+    {
+      "id": "4",
+      "title": "Développeur Backend",
+      "company": "Web Solutions",
+      "description": "Développer des APIs et gérer les bases de données.",
+      "salary": 8500,
+      "experience": 2
+    },
+    {
+      "id": "5",
+      "title": "Chef de projet",
+      "company": "Innovatech",
+      "description": "Coordonner les équipes et gérer les délais des projets.",
+      "salary": 10000,
+      "experience": 5
+    },
+    {
+      "id": "6",
+      "title": "Data Analyst",
+      "company": "DataCorp",
+      "description": "Analyser les données pour générer des insights stratégiques.",
+      "salary": 7500,
+      "experience": 2 
+    },
+    {
+      "id": "7",
+      "title": "Support technique",
+      "company": "HelpDesk Inc",
+      "description": "Assister les utilisateurs et résoudre les problèmes techniques.",
+      "salary": 6000,
+      "experience": 1 
+    }
+  ]
+}
