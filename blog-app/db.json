@@ -1,0 +1,50 @@
+{
+  "posts": [
+    {
+      "title": "Introduction à Vue.js",
+      "body": "Ceci est le contenu complet du premier post. Il contient des informations importantes sur Vue.js et les bonnes pratiques.",
+      "tags": [
+        "Frontend"
+      ],
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "title": "Créer une API REST avec Node.js",
+      "body": "Ceci est le contenu complet du deuxième post. Il parle de Node.js et de la création d'une API REST simple.",
+      "tags": [
+        "Node",
+        "Backend"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Gérer les routes dynamiques avec Vue Router",
+      "body": "Contenu complet du troisième post. Il explique comment utiliser Vue Router et gérer les routes dynamiques dans une application SPA.",
+      "tags": [
+        "Vue",
+        "Router",
+        "SPA"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Développement fullstack avec Vue et Node",
+      "body": "Ceci est un autre article parlant de développement web fullstack avec Vue et Node.",
+      "tags": [
+        "Fullstack",
+        "Vue",
+        "Node"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Introduction à JSON et à son utilisation",
+      "body": "Ce post explique le format JSON et comment l’utiliser pour stocker et échanger des données entre client et serveur.",
+      "tags": [
+        "JSON",
+        "Data"
+      ]
+    }
+  ]
+}
