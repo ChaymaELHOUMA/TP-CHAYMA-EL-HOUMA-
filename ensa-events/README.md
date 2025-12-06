@@ -1,44 +1,49 @@
-# ensa-events
+# TP6 Vue.js - ENSA Events
 
-This template should help get you started developing with Vue 3 in Vite.
+Une application **Vue.js** permettant aux étudiants de voter pour des événements.  
+L'application utilise **Firebase Authentication** pour l'authentification et **Firestore** pour stocker les votes.
 
-## Recommended IDE Setup
+---
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🌐 Site déployé
 
-## Recommended Browser Setup
+Vous pouvez consulter l'application en ligne ici :  
+[https://ensa-events-63464.web.app](https://ensa-events-63464.web.app)
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+---
 
-## Customize configuration
+## 🖥️ Captures d'écran
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### Page de connexion
+![Login](images/login.png)
 
-## Project Setup
+### Liste des événements
+![Events](images/event.png)
 
-```sh
+---
+
+## ⚙️ Installation et lancement
+
+1. Cloner le projet :
+
+```bash
+git clone <lien-du-depot-github>
+
+2. Installer les dépendances :
+
+```bash
 npm install
-```
 
-### Compile and Hot-Reload for Development
+3. Lancer l'application en mode développement :
 
-```sh
+```bash
 npm run dev
-```
 
-### Compile and Minify for Production
+## 💡 Fonctionnalités
 
-```sh
-npm run build
-```
+- Authentification uniquement pour les emails universitaires (`@uca.ac.ma`)  
+- Création de compte et connexion sécurisée  
+- Liste des événements avec possibilité de voter **Yes/No**  
+- Empêche le double vote pour un même événement  
+- Application déployée sur Firebase Hosting  
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
